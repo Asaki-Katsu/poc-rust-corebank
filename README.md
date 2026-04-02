@@ -57,6 +57,48 @@ cargo test
 cargo clippy && cargo fmt -- --check
 ```
 
-## Requirements
+## Prerequisites
 
-- Rust (2024 edition)
+### Rust toolchain
+
+Install Rust via [rustup](https://rustup.rs/) (the official installer):
+
+```bash
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+
+This project uses the **2024 edition**, which requires Rust **nightly** or a recent stable release that supports it. After installing, make sure you have the latest toolchain:
+
+```bash
+rustup update
+```
+
+Verify the installation:
+
+```bash
+rustc --version
+cargo --version
+```
+
+### IDE setup (recommended)
+
+Install [rust-analyzer](https://rust-analyzer.github.io/) for your IDE — it provides autocomplete, inline type hints, go-to-definition, and real-time error checking:
+
+- **VS Code** — install the [rust-analyzer extension](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
+- **JetBrains (IntelliJ, CLion, RustRover)** — rust-analyzer is built-in or available as a plugin
+- **Neovim / other LSP-compatible editors** — configure via your LSP client
+
+### Tech stack
+
+| Dependency | Purpose |
+|---|---|
+| [Axum](https://github.com/tokio-rs/axum) | HTTP framework |
+| [Tokio](https://tokio.rs/) | Async runtime |
+| [Serde](https://serde.rs/) | JSON serialization/deserialization |
+| [rust_decimal](https://github.com/paupino/rust-decimal) | Precise decimal arithmetic for money |
+| [uuid](https://github.com/uuid-rs/uuid) | Unique ID generation |
+| [chrono](https://github.com/chronotope/chrono) | Date/time handling |
+| [tracing](https://github.com/tokio-rs/tracing) | Structured logging |
+| [tower-http](https://github.com/tower-rs/tower-http) | HTTP middleware (CORS, tracing) |
+
+All dependencies are managed by Cargo — just run `cargo build` and they'll be fetched automatically.
