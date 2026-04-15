@@ -14,7 +14,7 @@ A REST API for core banking operations built with Rust, Axum, and Tokio. Follows
 
 Clean Architecture with four layers. Dependencies point inward only.
 
-```
+```text
 Interface (HTTP) → Application (Use Cases) → Domain (Entities, Value Objects)
 Infrastructure (Repos) → Application (implements port traits)
 ```
@@ -27,7 +27,7 @@ Infrastructure (Repos) → Application (implements port traits)
 ## API
 
 | Method | Path | Description |
-|--------|------|-------------|
+| -------- | ------ | ------------- |
 | `GET` | `/health` | Health check |
 | `POST` | `/accounts` | Create account |
 | `GET` | `/accounts` | List all accounts |
@@ -91,7 +91,7 @@ Install [rust-analyzer](https://rust-analyzer.github.io/) for your IDE — it pr
 ### Tech stack
 
 | Dependency | Purpose |
-|---|---|
+| --- | --- |
 | [Axum](https://github.com/tokio-rs/axum) | HTTP framework |
 | [Tokio](https://tokio.rs/) | Async runtime |
 | [Serde](https://serde.rs/) | JSON serialization/deserialization |
