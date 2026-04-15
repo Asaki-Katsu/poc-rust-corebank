@@ -1,6 +1,6 @@
 # Core Banking API
 
-A REST API for core banking operations built with Rust, Axum, and Tokio. Follows Clean Architecture with compile-time dependency injection and zero-cost abstractions.
+A REST API service for core banking operations built with Rust, Axum, and Tokio. Follows Clean Architecture with compile-time dependency injection and zero-cost abstractions.
 
 ## Features
 
